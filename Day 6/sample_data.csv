@@ -1,0 +1,11 @@
+employee_id,name,department,age,salary,years_experience,city
+101,Alice Johnson,Engineering,29,75000,5,New York
+102,Bob Smith,Marketing,34,62000,8,Chicago
+103,Carol Davis,Engineering,41,95000,15,New York
+104,David Wilson,Sales,26,,2,Boston
+105,Eva Brown,Marketing,38,68000,10,Chicago
+106,Frank Miller,Engineering,31,82000,6,San Francisco
+107,Grace Lee,Sales,45,72000,,New York
+108,Henry Taylor,HR,29,58000,4,Boston
+109,Ivy Chen,Engineering,27,71000,3,San Francisco
+110,Jack White,Sales,33,,7,Chicago
