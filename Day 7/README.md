@@ -9,20 +9,21 @@ covering data cleaning, basic statistical analysis, and visualizations.
 rating, duration, listed_in, description).
 Source: [TidyTuesday / Kaggle Netflix Movies and TV Shows dataset].
 
+Click the thumbnail below to watch the project demonstration.
+
+[![Watch the video](https://img.youtube.com/vi/rG3Ve4Tkv34/0.jpg)](https://www.youtube.com/watch?v=rG3Ve4Tkv34)
+
 ## Project Structure
 ```
-netflix_dataset_analysis/
-├── data/
-│   └── netflix_titles.csv       # raw dataset
-├── outputs/
-│   ├── 1_bar_top_countries.png
-│   ├── 2_line_titles_per_year.png
-│   ├── 3_histogram_movie_duration.png
-│   ├── 4_pie_movie_vs_tvshow.png
-│   └── 5_bar_top_genres.png     # bonus chart
-├── scripts/
-│   └── analysis.py              # load, clean, analyze, visualize
-└── README.md                    # this file
+Day 7/
+├── netflix_titles.csv          # raw dataset
+├── netflix_visualizaton.py     # load, clean, analyze, visualize
+├── 1_bar_top_countries.png
+├── 2_line_titles_per_year.png
+├── 3_histogram_movie_duration.png
+├── 4_pie_movie_vs_tvshow.png
+├── 5_bar_top_genres.png
+└── README.md                   # this file
 ```
 
 ## How to Run
