@@ -1,0 +1,17 @@
+Emp ID,Full Name ,age,Dept,Salary($),Join Date,Email
+101,Alice Roy,29,Sales,55000,2019-03-01,alice@corp.com
+102,Bipasha Sen,34,IT,72000,01/15/2020,bipasha@corp.com
+103,Chandan Das,,IT,68000,2018-11-23,chandan@corp.com
+104,Debika Ghosh,41,HR,unknown,2021-06-30,debika@corp.com
+105,Esha Kar,26,Sales,51000,2020-02-14,
+106,,38,Finance,83000,,farhan@corp.com
+107,Gautam Paul,45,,91000,2017-09-09,gautam@corp.com
+108,Himadri Nag,N/A,IT,76000,2019-12-01,himadri@corp.com
+109,Ipsita Bose,31,HR,,2022-01-19,ipsita@corp.com
+110,Jayanta Roy,27,Finance,62000,2020-07-07,jayanta@corp.com
+102,Bipasha Sen,34,IT,72000,01/15/2020,bipasha@corp.com
+111,Kunal Dutta,50,Sales,58000,2016-05-22,kunal@corp.com
+112,Labani Chatterjee,29,IT,70000,2021-03-15,labani@corp.com
+113,Manas Saha,,HR,64000,2019-08-08,manas@corp.com
+114,Nabanita Dey,33,Finance,88000,2018-12-12,nabanita@corp.com
+115,Oindrila Basu,40,Sales,60500,2020-10-10,oindrila@corp.com
