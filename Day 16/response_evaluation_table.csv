@@ -1,0 +1,406 @@
+chunk_config,chunk_size,num_chunks_in_doc,question,retrieval_keyword_recall,answer_keyword_recall,avg_similarity_top3,latency_ms,answer
+small_150,150,34,What are the working days during the internship?,1.0,1.0,0.213,0.79,"You are entitled to 12 days of leave during the internship period. INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following"
+small_150,150,34,How long is the internship duration?,1.0,1.0,0.177,0.75,"INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following ive
+Make the most of your experience
+We’re excited to have you with us and wish you a rewarding internship experience at Linkific!"
+small_150,150,34,What time is the Daily Tech Meet held?,1.0,1.0,0.291,0.75,"Daily Tech Meet
+🕗 8:00 PM, Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team e required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progres"
+small_150,150,34,What three things must interns maintain during Month 1 training?,0.0,0.0,0.182,0.74,"from the following working day
+Month 1: Training Phase
+You will undergo a structured training period before being assigned to a project. This document will guide you on how things work, what to expect, and whom to reach out to if you need any help."
+small_150,150,34,What is the minimum attendance required for the Certificate of Completion?,1.0,1.0,0.276,0.71,"ctures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. lotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit"
+small_150,150,34,How many days of leave are interns entitled to?,1.0,1.0,0.231,0.72,"You are entitled to 12 days of leave during the internship period. n
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guide"
+small_150,150,34,What email should be used to contact HR?,1.0,1.0,0.133,0.73,"n
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guide Exam Leave: Please submit your leave request on the dashboard and email HR with your exam timetable attached for reference"
+small_150,150,34,What should the GitHub repository be named?,1.0,0.0,0.283,0.74,"ogle Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named e required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progres"
+small_150,150,34,Who is the CTO of Linkific?,1.0,0.0,0.098,0.72,"ill be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and n
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guide"
+small_150,150,34,What is the maximum time allowed per person to present updates in the Tech Meet?,1.0,1.0,0.204,0.72,"and reporting the deliverables of your task
+Keep updates concise — maximum 4 minutes per person
+Use the session to clarify any doubts
+Note: If you are e required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progres"
+medium_300,300,17,What are the working days during the internship?,1.0,1.0,0.197,0.76,"You are entitled to 12 days of leave during the internship period. NTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive l"
+medium_300,300,17,How long is the internship duration?,1.0,1.0,0.11,0.74,"NTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive l re excited to have you with us and wish you a rewarding internship experience at Linkific!"
+medium_300,300,17,What time is the Daily Tech Meet held?,1.0,1.0,0.253,0.78,"You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress. Daily Tech Meet
+🕗 8:00 PM, Monday to Saturday
+🔗 https://meet.google.com/tok-c"
+medium_300,300,17,What three things must interns maintain during Month 1 training?,0.67,0.67,0.151,0.78,"ed
+Join the Tech Meet at 8:00 PM and be introduced to the team
+Tasks will begin from the following working day
+Month 1: Training Phase
+You will undergo a structured training period before being assigned to a project. oogle Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+Y"
+medium_300,300,17,What is the minimum attendance required for the Certificate of Completion?,1.0,1.0,0.219,0.78,", Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on t"
+medium_300,300,17,How many days of leave are interns entitled to?,1.0,1.0,0.214,0.75,"You are entitled to 12 days of leave during the internship period. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on t"
+medium_300,300,17,What email should be used to contact HR?,1.0,1.0,0.135,0.75,"n
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guidelines (Additional Cases):
+Emergency Leave: May be requested on the same day with a valid reason, subject to approval. garding your internship, please reach out to:
+Email: hr.linkific@gmail.com
+Ms. Divya Sawarkar
+COO
++91 76207 94821
+Mr. Aditya Bondre
+CTO
++91 95459 85732
+Garima Pandey
+HR Team
+91 92502 81525
+Namah Sharma
+HR Team
++91 9682666981
+Chanda Pandey
+HR Team
++91 70097 65266
+Note: If you have any concerns or gri"
+medium_300,300,17,What should the GitHub repository be named?,1.0,1.0,0.14,0.72,"oogle Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+Y You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+medium_300,300,17,Who is the CTO of Linkific?,1.0,1.0,0.07,0.71,"garding your internship, please reach out to:
+Email: hr.linkific@gmail.com
+Ms. Divya Sawarkar
+COO
++91 76207 94821
+Mr. Aditya Bondre
+CTO
++91 95459 85732
+Garima Pandey
+HR Team
+91 92502 81525
+Namah Sharma
+HR Team
++91 9682666981
+Chanda Pandey
+HR Team
++91 70097 65266
+Note: If you have any concerns or gri NTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive l"
+medium_300,300,17,What is the maximum time allowed per person to present updates in the Tech Meet?,1.0,1.0,0.191,0.76,"Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team WhatsApp group description)
+During the session:
+Present your work by sharing your screen and reporting the deliverables of your task
+Keep updates concise — maximum 4 minutes per person
+Use the session to clari You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+large_600,600,8,What are the working days during the internship?,1.0,1.0,0.124,0.88,"You are entitled to 12 days of leave during the internship period. INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive login credentials for the Linkific dashboard, which"
+large_600,600,8,How long is the internship duration?,1.0,1.0,0.091,0.9,"INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive login credentials for the Linkific dashboard, which dates, and team coordination
+You’ll also receive login credentials for the Linkific dashboard, which you will use to view and submit tasks, apply for leave, and access internship-related information."
+large_600,600,8,What time is the Daily Tech Meet held?,1.0,1.0,0.203,0.85,"You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress. Daily Tech Meet
+🕗 8:00 PM, Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team WhatsApp"
+large_600,600,8,What three things must interns maintain during Month 1 training?,1.0,1.0,0.123,0.82,"ed
+Join the Tech Meet at 8:00 PM and be introduced to the team
+Tasks will begin from the following working day
+Month 1: Training Phase
+You will undergo a structured training period before being assigned to a project. You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+large_600,600,8,What is the minimum attendance required for the Certificate of Completion?,1.0,1.0,0.135,0.83,", Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send a"
+large_600,600,8,How many days of leave are interns entitled to?,1.0,1.0,0.186,0.85,"You are entitled to 12 days of leave during the internship period. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send a"
+large_600,600,8,What email should be used to contact HR?,1.0,1.0,0.151,0.84,"n
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guidelines (Additional Cases):
+Emergency Leave: May be requested on the same day with a valid reason, subject to approval. CONTACT
+For any questions or concerns regarding your internship, please reach out to:
+Email: hr.linkific@gmail.com
+Ms. Divya Sawarkar
+COO
++9"
+large_600,600,8,What should the GitHub repository be named?,1.0,1.0,0.101,0.9,"Required Columns: Date, Day, Task, Description, Tools & Tech Used, Status, Output, Meeting Conducted By, Meeting Time, Participants
+Share editorial access with both emails below:
+hr.linkific@gmail.com
+Google Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your t You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+large_600,600,8,Who is the CTO of Linkific?,1.0,1.0,0.073,0.99,"FINAL NOTE
+We encourage you to:
+Ask questions
+Stay proactive
+Make the most of your experience
+We’re excited to have you with us and wish you a rewarding internship experience at Linkific! garding your internship, please reach out to:
+Email: hr.linkific@gmail.com
+Ms. Divya Sawarkar
+COO
++91 76207 94821
+Mr. Aditya Bondre
+CTO
++91 95459 85732
+Garima Pandey
+HR Team
+91 92502 81525
+Namah Sharma
+HR Team
++91 9682666981
+Chanda Pandey
+HR Team
++91 70097 65266
+Note: If you have any concerns or grievances, please feel free to reach out to HR."
+large_600,600,8,What is the maximum time allowed per person to present updates in the Tech Meet?,1.0,1.0,0.163,0.88,"Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team WhatsApp group description)
+During the session:
+Present your work by sharing your screen and reporting the deliverables of your task
+Keep updates concise — maximum 4 minutes per person
+Use the session to clarify any doubts
+Note: If you are late to join, a reminder may be sent in the group as part of the regular process. You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+xlarge_1200,1200,4,What are the working days during the internship?,1.0,1.0,0.106,0.93,"You are entitled to 12 days of leave during the internship period. INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive login credentials for the Linkific dashboard, which you will use to view and submit tasks, apply for leave, and access internship-related information."
+xlarge_1200,1200,4,How long is the internship duration?,1.0,1.0,0.074,0.93,"INTERNSHIP OVERVIEW
+Working Days: Monday to Saturday
+Internship Duration: 4 months
+COMMUNICATION CHANNELS
+You will be added to the following WhatsApp groups:
+Linkific Interns – General updates and announcements
+Linkific Tech Team (Interns) – Tasks, updates, and team coordination
+You’ll also receive login credentials for the Linkific dashboard, which you will use to view and submit tasks, apply for leave, and access internship-related information. INTERNSHIP FLOW
+Onboarding Day
+Attend the scheduled onboarding meeting
+Be added to relevant WhatsApp groups and log in to the Linkific dashboard using the credentials provided
+Join the Tech Meet at 8:00 PM and be introduced to the team
+Tasks will begin from the following working day
+Month 1: Training Phase
+You will undergo a structured training period before being assign"
+xlarge_1200,1200,4,What time is the Daily Tech Meet held?,1.0,1.0,0.157,0.96,"You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress. Daily Tech Meet
+🕗 8:00 PM, Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team WhatsApp group description)
+During the session:
+Present your work by sharing your screen and reporting the deliverables of your task
+Keep updates concise — maximum 4 minutes per person
+Use the session to clarify any doubts
+Note: If you are late to join, a reminder may be sent in the group as part of the regular process."
+xlarge_1200,1200,4,What three things must interns maintain during Month 1 training?,1.0,0.0,0.108,0.97,"This document will guide you on how things work, what to expect, and whom to reach out to if you need any help. INTERNSHIP FLOW
+Onboarding Day
+Attend the scheduled onboarding meeting
+Be added to relevant WhatsApp groups and log in to the Linkific dashboard using the credentials provided
+Join the Tech Meet at 8:00 PM and be introduced to the team
+Tasks will begin from the following working day
+Month 1: Training Phase
+You will undergo a structured training period before being assign"
+xlarge_1200,1200,4,What is the minimum attendance required for the Certificate of Completion?,1.0,1.0,0.093,0.96,"s & Tech Used, Status, Output, Meeting Conducted By, Meeting Time, Participants
+Share editorial access with both emails below:
+hr.linkific@gmail.com
+Google Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guidelines (Additional Cases):
+Emergency Leave: May be requested on the same day with a valid reason, subject to approval."
+xlarge_1200,1200,4,How many days of leave are interns entitled to?,1.0,1.0,0.116,0.97,"You are entitled to 12 days of leave during the internship period. Reminder: Exceeding your allotted leave may cause your attendance to fall below the 80% requirement, which may affect your Certificate of Completion
+How to Request Leave
+Submit a leave request on the Linkific Dashboard (1–2 days in advance)
+Send an email to HR at hr.linkific@gmail.com
+Leave Guidelines (Additional Cases):
+Emergency Leave: May be requested on the same day with a valid reason, subject to approval."
+xlarge_1200,1200,4,What email should be used to contact HR?,1.0,1.0,0.105,0.93,"CONTACT
+For any questions or concerns regarding your internship, please reach out to:
+Email: hr.linkific@gmail.com
+Ms. Divya Sawarkar
+COO
++91 76207 94821
+Mr. Aditya Bondre
+CTO
++91 95459 85732
+Garima Pandey
+HR Team
+91 92502 81525
+Namah Sharma
+HR Team
++91 9682666981
+Chanda Pandey
+HR Team
++91 70097 65266
+Note: If you have any concerns or grievances, please feel free to reach out to HR. s & Tech Used, Status, Output, Meeting Conducted By, Meeting Time, Participants
+Share editorial access with both emails below:
+hr.linkific@gmail.com
+Google Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion."
+xlarge_1200,1200,4,What should the GitHub repository be named?,1.0,1.0,0.065,0.92,"s & Tech Used, Status, Output, Meeting Conducted By, Meeting Time, Participants
+Share editorial access with both emails below:
+hr.linkific@gmail.com
+Google Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."
+xlarge_1200,1200,4,Who is the CTO of Linkific?,1.0,0.0,0.075,0.92,"s & Tech Used, Status, Output, Meeting Conducted By, Meeting Time, Participants
+Share editorial access with both emails below:
+hr.linkific@gmail.com
+Google Doc
+Maintain a single Google Doc throughout the training period
+Create a separate tab for each training day to document your tasks
+Github Repository
+Create a repository named ""Linkific Tasks""
+Create a separate folder for each training day (e.g., Day 1, Day 2, Day 3)
+Months 2–4: Project Phase
+You will be assigned to a live project
+Apply your training to real-world tasks
+Meeting structures may vary depending on project requirements
+LEAVE POLICY
+A minimum of 80% attendance is required to receive your Certificate of Completion. FINAL NOTE
+We encourage you to:
+Ask questions
+Stay proactive
+Make the most of your experience
+We’re excited to have you with us and wish you a rewarding internship experience at Linkific!"
+xlarge_1200,1200,4,What is the maximum time allowed per person to present updates in the Tech Meet?,1.0,1.0,0.135,0.96,"Daily Tech Meet
+🕗 8:00 PM, Monday to Saturday
+🔗 https://meet.google.com/tok-ceob-icj
+(Also available in the Tech Team WhatsApp group description)
+During the session:
+Present your work by sharing your screen and reporting the deliverables of your task
+Keep updates concise — maximum 4 minutes per person
+Use the session to clarify any doubts
+Note: If you are late to join, a reminder may be sent in the group as part of the regular process. You will be required to join the Daily Tech Meet and present your task
+You must maintain a Google Sheet, Google Doc, and Github Repository to track your progress."

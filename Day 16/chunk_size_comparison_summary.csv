@@ -1,0 +1,5 @@
+chunk_config,chunk_size,num_chunks_in_doc,avg_retrieval_recall,avg_answer_recall,avg_similarity,avg_latency_ms
+small_150,150,34,0.9,0.7,0.209,0.737
+medium_300,300,17,0.967,0.967,0.168,0.753
+large_600,600,8,1.0,1.0,0.135,0.874
+xlarge_1200,1200,4,1.0,0.8,0.103,0.945
