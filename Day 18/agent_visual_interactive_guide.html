@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent Planning & Enterprise Architecture Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-light: #6366f1;
+      --primary-bg: #eef2ff;
+      --secondary: #0ea5e9;
+      --accent: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --dark: #0f172a;
+      --dark-card: #1e293b;
+      --text: #334155;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --code-bg: #090d16;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+      color: var(--white);
+      padding: 60px 24px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #c7d2fe;
+      max-width: 850px;
+      margin: 0 auto 24px auto;
+      font-weight: 400;
+    }
+
+    .badge-container {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: -30px auto 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      background: var(--white);
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .nav-btn {
+      flex: 1;
+      min-width: 170px;
+      text-align: center;
+      padding: 12px 18px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      border: none;
+      background: transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn.active, .nav-btn:hover {
+      background: var(--primary-bg);
+      color: var(--primary);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      padding: 36px;
+      margin-bottom: 32px;
+    }
+
+    h2.section-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 28px 0 14px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.925rem;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .diagram-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 24px 0;
+      overflow-x: auto;
+      text-align: center;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .diagram-caption {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .trace-block {
+      background: var(--code-bg);
+      border-radius: 12px;
+      padding: 24px;
+      color: #e2e8f0;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin: 20px 0;
+      overflow-x: auto;
+      border: 1px solid #1e293b;
+    }
+
+    .trace-item {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .trace-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .trace-label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+    }
+
+    .label-thought { background: #3b82f6; color: white; }
+    .label-action { background: #10b981; color: white; }
+    .label-observation { background: #f59e0b; color: white; }
+    .label-final { background: #8b5cf6; color: white; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .feature-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .feature-box h4 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .alert {
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid;
+    }
+
+    .alert-info {
+      background-color: #eff6ff;
+      border-color: #3b82f6;
+      color: #1e40af;
+    }
+
+    .alert-success {
+      background-color: #ecfdf5;
+      border-color: #10b981;
+      color: #065f46;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    code {
+      font-family: 'Fira Code', monospace;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--primary);
+      font-size: 0.88em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AI Agent Planning & Architecture</h1>
+    <p>Comprehensive Learning Module covering AI Agents, Planning Paradigms, Tool Layer Integration, Error Resilience, and the ReAct (Reason + Act) Loop in Production.</p>
+    <div class="badge-container">
+      <span class="badge">Agent: Enterprise Data Analyst</span>
+      <span class="badge">Pattern: ReAct (Reason + Act)</span>
+      <span class="badge">Deployment: NovaRetail Core</span>
+      <span class="badge">Evaluation: Verified Multi-turn</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="nav-tabs">
+      <button class="nav-btn active" onclick="scrollToSection('task1')">Task 1: Planning Document</button>
+      <button class="nav-btn" onclick="scrollToSection('task2')">Task 2: ReAct Design & Workflow</button>
+      <button class="nav-btn" onclick="scrollToSection('usecase')">Task 2: End-to-End Traces</button>
+      <button class="nav-btn" onclick="scrollToSection('task3')">Task 3: Production Architecture</button>
+      <button class="nav-btn" onclick="scrollToSection('comparison')">Comparative Analysis</button>
+    </div>
+
+    <!-- TASK 1 -->
+    <section id="task1" class="card">
+      <h2 class="section-title">
+        <span>📋</span> Task 1: AI Agent Planning Document
+      </h2>
+      <p class="section-subtitle">System specification for an autonomous Enterprise Data Analyst Agent.</p>
+
+      <h3>1.1 Agent Objective & Target Audience</h3>
+      <p>
+        <strong>Objective:</strong> To autonomously interpret unstructured natural language business inquiries, formulate rigorous diagnostic hypotheses, retrieve and validate schema definitions, author and execute read-only analytical SQL, execute statistical computations in Python, and deliver auditable, chart-augmented executive insights.
+      </p>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4>🎯 Primary Personas</h4>
+          <p>VP of Growth, Head of Product, and Executive Stakeholders requiring immediate root-cause answers for KPI shifts without SQL authoring.</p>
+        </div>
+        <div class="feature-box">
+          <h4>🛡️ Secondary Personas</h4>
+          <p>Data Analysts and Analytics Engineers looking for verified SQL query lineage, reproducible pandas scripts, and instant cohort drill-downs.</p>
+        </div>
+      </div>
+
+      <h3>1.2 Available Tools & API Layer</h3>
+      <p>Each tool provides a strictly isolated capability, accessed via typed JSON payloads:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Type Signature</th>
+            <th>One-Line Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>metric_catalog_search</code></td>
+            <td><code>(query: str, domain?: str) -> List[MetricDef]</code></td>
+            <td>Discovers official enterprise metric formulas, calculation rules, and target tables from the semantic layer.</td>
+          </tr>
+          <tr>
+            <td><code>sql_schema_explorer</code></td>
+            <td><code>(table_names: List[str]) -> SchemaMetadata</code></td>
+            <td>Inspects column data types, foreign keys, partition filters, and sample values prior to SQL drafting.</td>
+          </tr>
+          <tr>
+            <td><code>sql_query_executor</code></td>
+            <td><code>(sql: str, timeout: int) -> QueryResult</code></td>
+            <td>Executes read-only SQL queries against the Snowflake/BigQuery warehouse with enforced compute ceilings.</td>
+          </tr>
+          <tr>
+            <td><code>python_code_sandbox</code></td>
+            <td><code>(code_script: str) -> ExecutionOutput</code></td>
+            <td>Executes statistical computations, regressions, and aggregations inside an isolated micro-VM.</td>
+          </tr>
+          <tr>
+            <td><code>chart_generator</code></td>
+            <td><code>(type: str, data: dict, config: dict) -> ChartArtifact</code></td>
+            <td>Renders responsive, executive-ready charts (Plotly / SVG / PNG) and outputs artifact references.</td>
+          </tr>
+          <tr>
+            <td><code>vector_doc_retriever</code></td>
+            <td><code>(query: str, top_k: int) -> List[DocChunk]</code></td>
+            <td>Performs semantic search across release notes, incident logs, and business post-mortems for qualitative context.</td>
+          </tr>
+          <tr>
+            <td><code>user_clarification_prompt</code></td>
+            <td><code>(question: str, options?: List[str]) -> str</code></td>
+            <td>Suspends execution to prompt human stakeholders when inquiries lack critical operational definitions.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>1.3 Decision-Making: The ReAct (Reason + Act) Loop</h3>
+      <p>
+        The agent operates via the <strong>ReAct (Reason + Act)</strong> cognitive architecture. Unlike naive LLM completions that attempt to solve complex queries in a single pass, ReAct decomposes the challenge into iterative cycles:
+      </p>
+      <ul>
+        <li><strong>Thought:</strong> The agent articulates its internal reasoning in natural language—assessing what it knows, what evidence is missing, and what action is required next.</li>
+        <li><strong>Action:</strong> The agent selects and calls a specific tool with validated input arguments.</li>
+        <li><strong>Observation:</strong> The execution environment returns results (data rows, stdout, or error tracebacks) that are appended to the agent's context window.</li>
+      </ul>
+      <p>This cycle continues autonomously until the agent formulates a verified final synthesis.</p>
+    </section>
+
+    <!-- TASK 2: DESIGN & WORKFLOW -->
+    <section id="task2" class="card">
+      <h2 class="section-title">
+        <span>🔄</span> Task 2: ReAct Control Flow & Error Strategy
+      </h2>
+      <p class="section-subtitle">Visual workflow diagram illustrating decision branches, self-healing retries, and guardrails.</p>
+
+      <div class="diagram-card">
+        <div class="mermaid">
+flowchart TD
+    Start([User Inquires with Analytical Question]) --> Sanitize[Inbound Guardrail: Sanitize & Scan Injection]
+    Sanitize --> InitThought[Agent Thought: Analyze Goal & Formulate Sub-goals]
+    
+    InitThought --> CheckAmbiguity{Ambiguous<br/>Requirements?}
+    
+    %% Branch: Ambiguity Handling
+    CheckAmbiguity -- Yes --> Clarify[Call user_clarification_prompt]
+    Clarify --> WaitUser[/Receive User Clarification/]
+    WaitUser --> InitThought
+    
+    %% Branch: Autonomous Path
+    CheckAmbiguity -- No --> SelectTool[Select Tool based on Thought]
+    
+    SelectTool --> ToolDecision{Tool Selected?}
+    ToolDecision -- Metric/Glossary --> T_Cat[metric_catalog_search]
+    ToolDecision -- Schema Discovery --> T_Sch[sql_schema_explorer]
+    ToolDecision -- Data Warehouse Query --> T_SQL[sql_query_executor]
+    ToolDecision -- Python Computation --> T_Py[python_code_sandbox]
+    ToolDecision -- Visualization --> T_Chart[chart_generator]
+    ToolDecision -- Document Search --> T_Doc[vector_doc_retriever]
+
+    %% Execution & Observation
+    T_Cat --> Observ[Receive Observation / Tool Output]
+    T_Sch --> Observ
+    T_SQL --> Observ
+    T_Py --> Observ
+    T_Chart --> Observ
+    T_Doc --> Observ
+    
+    Observ --> CheckError{Did Tool Return<br/>Error / Empty Result?}
+    
+    %% Error Handling Loop
+    CheckError -- Yes: Syntax or Schema Error --> ThoughtRepair[Thought: Diagnose Error from Traceback]
+    ThoughtRepair --> CheckRetry{Retry Count<br/>< 3?}
+    CheckRetry -- Yes --> AdjustTool[Adjust Arguments / Schema Correction]
+    AdjustTool --> SelectTool
+    CheckRetry -- No --> FallbackOutput[Set Warning Flag & Adopt Fallback Strategy]
+    FallbackOutput --> FinalThought
+    
+    %% Success Loop
+    CheckError -- No: Valid Data --> EvalGoal{Is Analysis<br/>Goal Complete?}
+    EvalGoal -- Need More Info --> NextThought[Thought: Determine Next Step from Data]
+    NextThought --> SelectTool
+    
+    EvalGoal -- All Questions Answered --> FinalThought[Final Thought: Synthesize Insights & Recommendations]
+    FinalThought --> FormatAnswer[Generate Executive Report, Tables & Charts]
+    FormatAnswer --> GuardrailCheck[Guardrail Layer: Verify Numbers against Raw Data & Mask PII]
+    GuardrailCheck --> Complete([Deliver Final Answer to User])
+        </div>
+        <div class="diagram-caption">Figure 1: Complete ReAct Agent Control Flow featuring Self-Healing and Guardrail Loops.</div>
+      </div>
+
+      <h3>2.1 Error-Handling & Fallback Matrix</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Failure Scenario</th>
+            <th>Self-Healing Mechanism</th>
+            <th>Maximum Retries</th>
+            <th>Terminal Fallback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Warehouse SQL Syntax / Schema Error</strong></td>
+            <td>Injects database error traceback into next Thought; runs schema explorer to verify correct column identifiers.</td>
+            <td>2 attempts</td>
+            <td>Emits drafted query with error explanation and prompts human analyst.</td>
+          </tr>
+          <tr>
+            <td><strong>Query Execution Timeout (&gt; 30s)</strong></td>
+            <td>Adds partition filters, limits date windows, and pushes down aggregations.</td>
+            <td>1 attempt</td>
+            <td>Requests user to narrow date range.</td>
+          </tr>
+          <tr>
+            <td><strong>Python Sandbox Crash / NaN Output</strong></td>
+            <td>Catches runtime exception, scrubs null values via pandas imputation, and re-executes.</td>
+            <td>2 attempts</td>
+            <td>Presents unaggregated tabular records directly from SQL.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TASK 2: END-TO-END USE CASE -->
+    <section id="usecase" class="card">
+      <h2 class="section-title">
+        <span>🔍</span> Realistic End-to-End ReAct Traces
+      </h2>
+      <p class="section-subtitle">Real-world enterprise scenario walking through verbatim Thought / Action / Observation cycles.</p>
+
+      <div class="alert alert-info" style="font-size: 0.88rem; background-color: #f1f5f9; border-color: #64748b; color: #334155; margin-bottom: 20px;">
+        <strong>Note:</strong> NovaRetail, NovaIQ, the datasets, business metrics, release events, and numerical results used in this document are hypothetical examples created for demonstrating the AI Agent architecture and ReAct workflow.
+      </div>
+
+      <div class="alert alert-info">
+        <strong>Business Scenario:</strong> The VP of Growth asks: <em>"Why did our customer churn rate spike in Q3 2025, and which subscription tiers were most impacted?"</em>
+      </div>
+
+      <div class="trace-block">
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 1</span>
+          <div>The user requires a root-cause analysis of Q3 2025 customer churn. First, I must retrieve the company's official metric definition for churn to ensure formula precision.</div>
+          <span class="trace-label label-action">Action 1</span>
+          <div><code>metric_catalog_search(query="customer churn rate", domain="retention")</code></div>
+          <span class="trace-label label-observation">Observation 1</span>
+          <div><code>[{"metric": "customer_logo_churn_rate", "formula": "canceled_subs / active_start_subs", "table": "analytics_dw.dim_subscriptions"}]</code></div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 2</span>
+          <div>Now I will inspect the schema of <code>dim_subscriptions</code> and <code>fct_subscription_events</code> to locate tier and cancellation timestamp columns.</div>
+          <span class="trace-label label-action">Action 2</span>
+          <div><code>sql_schema_explorer(table_names=["analytics_dw.dim_subscriptions", "analytics_dw.fct_subscription_events"])</code></div>
+          <span class="trace-label label-observation">Observation 2</span>
+          <div><code>Found columns: plan_tier ('Starter', 'Growth', 'Enterprise'), event_type ('CANCELED'), cancellation_reason_code.</code></div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 3</span>
+          <div>I will execute an analytical SQL query calculating active start subscriptions, cancellations, and churn % for Q3 2025 across all three tiers.</div>
+          <span class="trace-label label-action">Action 3</span>
+          <div><code>sql_query_executor(sql="SELECT plan_tier, active_start, canceled, churn_pct FROM ...")</code></div>
+          <span class="trace-label label-observation">Observation 3</span>
+          <div>
+            <code>Growth: 8.59% churn (244 canceled / 2,840 active)</code><br>
+            <code>Starter: 5.20% churn (318 canceled / 6,120 active)</code><br>
+            <code>Enterprise: 2.00% churn (9 canceled / 450 active)</code>
+          </div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 4</span>
+          <div>The Growth Tier experienced a massive anomaly (8.59% vs. 3.2% historical benchmark). I must query the cancellation reason codes specifically for the Growth tier.</div>
+          <span class="trace-label label-action">Action 4</span>
+          <div><code>sql_query_executor(sql="SELECT cancellation_reason_code, COUNT(*) FROM ... WHERE plan_tier = 'Growth' GROUP BY 1")</code></div>
+          <span class="trace-label label-observation">Observation 4</span>
+          <div><code>API_LIMIT_RESTRICTIONS: 134 cancellations (54.92% of tier churn). PRICE_INCREASE: 49 cancellations (20.08%).</code></div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 5</span>
+          <div>Over 54% of churn was attributed to API limit restrictions. I will search the product documentation and release notes to see if rate limit policies changed in Q3.</div>
+          <span class="trace-label label-action">Action 5</span>
+          <div><code>vector_doc_retriever(query="Growth tier API rate limit changes Q3 2025", top_k=2)</code></div>
+          <span class="trace-label label-observation">Observation 5</span>
+          <div><code>Release v4.12 (July 15, 2025): Enforced a hard daily cap of 25,000 API calls on Growth accounts; exceeding quota resulted in immediate 429 errors.</code></div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-thought">Thought 6</span>
+          <div>I have pinpointed the root cause. Now I will use Python to model total Annual Recurring Revenue (ARR) destruction and compute financial attribution.</div>
+          <span class="trace-label label-action">Action 6</span>
+          <div><code>python_code_sandbox(code_script="import pandas as pd ... calculate_arr_loss()")</code></div>
+          <span class="trace-label label-observation">Observation 6</span>
+          <div><code>Total Q3 ARR Loss: $1,192,056. Growth Tier ARR Loss: $875,472 (73.4% of total).</code></div>
+        </div>
+
+        <div class="trace-item">
+          <span class="trace-label label-final">Final Thought</span>
+          <div>All hypotheses confirmed with data. Growth churn spiked to 8.59% due to unannounced API rate throttling enacted in v4.12. Formatting executive answer.</div>
+        </div>
+      </div>
+
+      <div class="alert alert-success">
+        <strong>Delivered Output:</strong> The executive receives an executive summary card (overall churn: 6.07%, Growth tier: 8.59%), a breakdown table across all tiers, financial attribution ($1,192,056 total ARR loss; $875,472 / 73.4% in Growth), and 3 strategic recommendations (14-day soft-cap grace period, a $50/mo API add-on, and a targeted win-back campaign).
+      </div>
+    </section>
+
+    <!-- TASK 3: ARCHITECTURE -->
+    <section id="task3" class="card">
+      <h2 class="section-title">
+        <span>🏛️</span> Task 3: Enterprise Production Architecture
+      </h2>
+      <p class="section-subtitle">End-to-end architecture diagram showing all system components, micro-VM sandboxes, memory layers, and data flow directions.</p>
+
+      <div class="diagram-card">
+        <div class="mermaid">
+graph TD
+    classDef client fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef orchestrator fill:#ede7f6,stroke:#512da8,stroke-width:2px;
+    classDef llm fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef tools fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+    classDef data fill:#fce4ec,stroke:#c2185b,stroke-width:2px;
+    classDef state fill:#fffde7,stroke:#fbc02d,stroke-width:2px;
+    classDef egress fill:#e0f2f1,stroke:#00796b,stroke-width:2px;
+
+    subgraph ClientLayer ["1. User & Client Integration Layer"]
+        UI_Slack["Enterprise Slack Bot<br/>(Socket Mode / Events API)"]:::client
+        UI_Web["Executive Web Portal<br/>(React / Next.js)"]:::client
+        UI_BI["Scheduled Report Runner<br/>(Airflow DAG Trigger)"]:::client
+    end
+
+    subgraph CoreEngine ["2. Agent Core & Orchestration Engine"]
+        Gateway["API Gateway & Auth / Token Rate Limiter"]:::orchestrator
+        Guard_In["Inbound Guardrail Filter<br/>(Regex, PII Masker, Prompt Injection)"]:::orchestrator
+        Orchestrator["Agent Orchestrator / State Machine<br/>(LangGraph / Semantic Kernel Engine)"]:::orchestrator
+        PlanManager["Task Planner & Sub-goal Decomposer"]:::orchestrator
+        ReActLoop["ReAct Loop Engine<br/>(Thought -> Action -> Observation)"]:::orchestrator
+    end
+
+    subgraph LLM_Reasoning ["3. Foundation Reasoning Layer"]
+        ModelCore["Primary Reasoning LLM<br/>(Claude 3.5 Sonnet / GPT-4o)"]:::llm
+        PromptRepo["System Prompt & Dynamic Tool Registry"]:::llm
+    end
+
+    subgraph StateMemory ["4. Memory & Context State Store"]
+        ShortMem["Session Working Memory<br/>(Redis Cluster - Fast Scratchpad)"]:::state
+        LongMem["Entity & Preference Vector Memory<br/>(Pinecone / Milvus - User Habits)"]:::state
+        AuditLog["Immutable Execution Audit Trail<br/>(PostgreSQL Event Sinks)"]:::state
+    end
+
+    subgraph ToolLayer ["5. Tool Execution & Sandbox Layer"]
+        T_CatTool["Metric Catalog Tool"]:::tools
+        T_SQLTool["Warehouse Query Tool<br/>(Read-Only Connection Pool)"]:::tools
+        T_PyBox["Isolated Python Sandbox<br/>(gVisor Container Micro-VM)"]:::tools
+        T_ChartTool["Visualization Engine<br/>(Plotly / ECharts Renderer)"]:::tools
+        T_VecTool["Semantic Knowledge Retriever"]:::tools
+    end
+
+    subgraph DataSources ["6. Enterprise Data Sources & Systems of Record"]
+        DW["Cloud Data Warehouse<br/>(Snowflake / BigQuery)"]:::data
+        SemanticDB["dbt Semantic Layer & Metric Store"]:::data
+        VectorDB["Vector Store (Document Chunks & Post-Mortems)"]:::data
+        Catalog["Data Catalog (Alation / Atlan / OpenMetadata)"]:::data
+    end
+
+    subgraph EgressLayer ["7. Output, Guardrails & Egress Layer"]
+        Guard_Out["Outbound Fact-Checker & PII Verifier"]:::egress
+        Delivery["Multi-Channel Delivery Dispatcher"]:::egress
+        ArtifactStore["S3 / Cloud Storage Bucket (Charts & CSVs)"]:::egress
+    end
+
+    %% Data Flow Arrows
+    UI_Slack -->|User Query| Gateway
+    UI_Web -->|User Query| Gateway
+    UI_BI -->|Scheduled Job| Gateway
+
+    Gateway --> Guard_In
+    Guard_In --> Orchestrator
+    
+    Orchestrator <--> PlanManager
+    Orchestrator <--> ReActLoop
+    
+    ReActLoop <-->|Context & Reasoning Prompts| ModelCore
+    PromptRepo -.-> ModelCore
+
+    ReActLoop <-->|Read / Write Current Session| ShortMem
+    ReActLoop <-->|Recall User History| LongMem
+
+    ReActLoop -->|Invoke Tool Call| ToolLayer
+    
+    T_CatTool <-->|Search Definitions| SemanticDB
+    T_SQLTool <-->|Execute SQL| DW
+    T_PyBox <-->|Code Sandbox Execution| T_PyBox
+    T_VecTool <-->|Dense Retrieval| VectorDB
+    T_CatTool <-->|Schema Introspection| Catalog
+    T_ChartTool -->|Save PNG/HTML| ArtifactStore
+
+    ToolLayer -->|Tool Observations| ReActLoop
+    ReActLoop -->|Emit Event Traces| AuditLog
+
+    ReActLoop -->|Finished Analysis| Guard_Out
+    Guard_Out --> Delivery
+    ArtifactStore -.-> Delivery
+    
+    Delivery -->|Rich Card / Insights| UI_Slack
+    Delivery -->|Interactive Report| UI_Web
+        </div>
+        <div class="diagram-caption">Figure 2: Enterprise Production AI Agent System Architecture with Flow Directions.</div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section id="comparison" class="card">
+      <h2 class="section-title">
+        <span>⚖️</span> Comparative Evaluation & Key Principles
+      </h2>
+      <p class="section-subtitle">Evaluating ReAct against alternative paradigms in real-world systems.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Architecture Paradigm</th>
+            <th>Dynamic Grounding</th>
+            <th>Fault Tolerance</th>
+            <th>Best Suited For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pure Chain-of-Thought (CoT)</strong></td>
+            <td>Zero (closed world)</td>
+            <td>Zero (cannot self-correct)</td>
+            <td>Single-step conceptual reasoning, essays, text summarization.</td>
+          </tr>
+          <tr>
+            <td><strong>Plan-and-Solve (Static)</strong></td>
+            <td>Low (plans upfront)</td>
+            <td>Fragile (breaks if step 1 fails)</td>
+            <td>Deterministic pipelines where schema and tools never drift.</td>
+          </tr>
+          <tr>
+            <td><strong>ReAct (Reason + Act)</strong></td>
+            <td><strong>Maximum (continual feedback)</strong></td>
+            <td><strong>High (dynamic self-repair)</strong></td>
+            <td><strong>Autonomous diagnostic analytics, dynamic tool calling, customer ops.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Advanced Agentic Coding & Systems Design • Linkific Technology Learning Module • Day 18</p>
+  </footer>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+      }
+    });
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
