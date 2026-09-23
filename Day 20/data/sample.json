@@ -1,0 +1,35 @@
+{
+  "project_name": "Project Antigravity Agent",
+  "version": "2.1.0",
+  "status": "In Progress",
+  "owner": "Alice Johnson",
+  "budget": 125000,
+  "milestones": [
+    {
+      "name": "Phase 1 - Tool Architecture",
+      "completed": true,
+      "due_date": "2026-09-15"
+    },
+    {
+      "name": "Phase 2 - Function Calling Router",
+      "completed": true,
+      "due_date": "2026-09-20"
+    },
+    {
+      "name": "Phase 3 - Multi-Tool Chaining",
+      "completed": false,
+      "due_date": "2026-09-28"
+    }
+  ],
+  "team_members": [
+    "Alice Johnson",
+    "Bob Smith",
+    "Diana Prince",
+    "Ian Malcolm"
+  ],
+  "metrics": {
+    "completion_rate": 0.67,
+    "code_coverage": 0.94,
+    "active_issues": 3
+  }
+}
