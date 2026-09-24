@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-09-24T12:27:04.583904+00:00",
+  "configuration": {
+    "base_url": "http://127.0.0.1:8000",
+    "total_requests": 100,
+    "concurrency": 10,
+    "payload": {
+      "name": "Benchmark Laptop",
+      "quantity": 2,
+      "price": 75000.0
+    }
+  },
+  "sync_endpoint": {
+    "label": "Synchronous (def)",
+    "url": "http://127.0.0.1:8000/api/v1/items/sync",
+    "total_requests": 100,
+    "successful_requests": 100,
+    "failed_requests": 0,
+    "total_time_seconds": 0.8033,
+    "requests_per_second": 124.49,
+    "avg_latency_ms": 75.9,
+    "min_latency_ms": 56.05,
+    "max_latency_ms": 109.29,
+    "p50_latency_ms": 76.5,
+    "p95_latency_ms": 97.03,
+    "p99_latency_ms": 101.88
+  },
+  "async_endpoint": {
+    "label": "Asynchronous (async def)",
+    "url": "http://127.0.0.1:8000/api/v1/items/async",
+    "total_requests": 100,
+    "successful_requests": 100,
+    "failed_requests": 0,
+    "total_time_seconds": 0.7881,
+    "requests_per_second": 126.89,
+    "avg_latency_ms": 73.89,
+    "min_latency_ms": 51.74,
+    "max_latency_ms": 112.79,
+    "p50_latency_ms": 72.42,
+    "p95_latency_ms": 93.1,
+    "p99_latency_ms": 108.48
+  },
+  "improvements": {
+    "total_time_improvement_pct": 1.89,
+    "avg_latency_improvement_pct": 2.65,
+    "throughput_improvement_pct": 1.93
+  }
+}
