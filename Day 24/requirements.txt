@@ -1,0 +1,16 @@
+# Production Web Framework & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.2
+pydantic-settings>=2.15.0
+python-dotenv>=1.0.1
+
+# Observability, Logging & Monitoring
+python-json-logger>=4.2.0
+prometheus-client>=0.26.0
+psutil>=7.2.2
+
+# Testing & Quality Assurance
+pytest>=9.1.1
+pytest-asyncio>=0.23.5
+httpx>=0.28.1

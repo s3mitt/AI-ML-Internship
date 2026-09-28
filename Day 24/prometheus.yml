@@ -1,0 +1,17 @@
+# ==============================================================================
+# Prometheus Scrape Configuration
+# Scrapes metrics emitted by the Linkific Production API service
+# ==============================================================================
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "linkific_api"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["api:8000"]
+        labels:
+          service: "linkific-service"
+          environment: "production"
