@@ -276,6 +276,6 @@ Open [http://localhost:9090/targets](http://localhost:9090/targets) to see the `
 
 | Deliverable | File Link | Description |
 | :--- | :--- | :--- |
-| **Deployment Checklist** | [`DEPLOYMENT_CHECKLIST.md`](./DEPLOYMENT_CHECKLIST.md) | Exhaustive gate checklist covering Testing, Logging, Env Vars, Docker, Docs, Security, and Monitoring. |
-| **Production Readiness Report** | [`PRODUCTION_READINESS_REPORT.md`](./PRODUCTION_READINESS_REPORT.md) | Comprehensive review report, test execution breakdown, architecture audit, and production maturity scorecard. |
+| **Deployment Checklist** | [`DEPLOYMENT_CHECKLIST.md`](./DEPLOYMENT_CHECKLIST.md) | Exhaustive gate checklist covering Testing, Logging, Env Vars, Docker, Docs, Security and Monitoring. |
+| **Production Readiness Report** | [`PRODUCTION_READINESS_REPORT.md`](./PRODUCTION_READINESS_REPORT.md) | Comprehensive review report, test execution breakdown, architecture audit and production maturity scorecard. |
 | **Updated README** | [`README.md`](./README.md) | Architectural documentation, operational guide, testing and docker execution instructions. |
