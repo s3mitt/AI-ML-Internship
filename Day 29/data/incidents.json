@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Amazon Automated Resume Screening Tool Gender Bias",
+    "year": 2018,
+    "category": "bias",
+    "summary": "Amazon developed an internal machine learning recruiting engine to automate resume screening and identify top software engineering talent. The model was trained on resumes submitted to the company over a ten-year window. Because technology industry hiring was historically male-dominated, the algorithm learned to penalize candidate profiles containing the word 'women's' (such as 'women's chess club captain') and downgraded graduates of all-women's colleges. Engineers attempted to neutralize specific gender terms, but the model discovered correlated proxy terms. Amazon ultimately scrapped the system in 2018 before deployment because equal treatment could not be guaranteed.",
+    "lesson": "Training algorithms on historical hiring data codifies and amplifies historical human biases; removing obvious demographic protected attributes is insufficient when proxy variables remain."
+  },
+  {
+    "id": 2,
+    "title": "Wrongful Arrest of Robert Williams via Facial Recognition",
+    "year": 2020,
+    "category": "bias",
+    "summary": "In Detroit, Michigan, Robert Williams was wrongfully arrested in front of his family for allegedly stealing luxury watches from a boutique store. Detroit Police Department detectives relied on automated facial recognition software that matched grainy surveillance video against a statewide driver's license database. The software flagged Williams despite noticeable physical differences between him and the actual suspect. The algorithm had known lower accuracy rates when evaluating darker skin tones. Investigators treated an unreliable probabilistic match as conclusive evidence without corroborating investigation, leading to unlawful overnight detention and civil rights violations.",
+    "lesson": "Facial recognition technology displays significant disparate error rates across racial demographics and must never be used as sole probable cause without strict independent corroboration."
+  },
+  {
+    "id": 3,
+    "title": "Samsung Semiconductor Source Code Leak via Public LLM",
+    "year": 2023,
+    "category": "privacy",
+    "summary": "Engineers in Samsung's semiconductor division uploaded confidential source code, semiconductor equipment measurement logs, and executive meeting notes into OpenAI's ChatGPT to identify software bugs and generate meeting summaries. Because employees used the default public consumer tier, the entered data was retained by the external provider for potential future model retraining. This resulted in proprietary intellectual property and trade secrets being transmitted beyond corporate security firewalls. Following three separate disclosure incidents within one month, Samsung restricted employee access to consumer AI chatbots and mandated the creation of internal isolated AI infrastructure.",
+    "lesson": "Entering confidential corporate or client data into external public generative models creates severe data exfiltration risks unless rigorous enterprise zero-data-retention agreements are enforced."
+  },
+  {
+    "id": 4,
+    "title": "Mata v. Avianca Fictitious Case Citations in Federal Court",
+    "year": 2023,
+    "category": "hallucination",
+    "summary": "Attorneys representing Roberto Mata in a personal injury lawsuit against Avianca Airlines in US District Court used ChatGPT to perform legal research. The chatbot fabricated non-existent judicial decisions, bogus judicial quotes, and invalid docket numbers, including 'Varghese v. China Southern Airlines'. The attorneys submitted these hallucinated precedents in a formal federal court brief without independently verifying the citations in official law reporters. When opposing counsel and the presiding judge could not locate the cited authorities, the court uncovered the hallucination and sanctioned the attorneys with monetary fines and professional reprimand.",
+    "lesson": "Large language models generate plausible-sounding syntactic hallucinations rather than verified factual truth; professional workflows require mandatory human verification against authoritative primary sources."
+  },
+  {
+    "id": 5,
+    "title": "Viral AI-Generated Pentagon Explosion Hoax Image",
+    "year": 2023,
+    "category": "misinformation",
+    "summary": "A synthetic image depicting a massive black smoke plume billowing beside the United States Pentagon was shared widely on social media platforms, amplified by verified accounts and financial news aggregators. The image was generated using text-to-image artificial intelligence tools. The viral spread caused brief public panic and triggered an immediate 500-point drop in the S&P 500 stock market index within minutes, erasing billions in market value before local defense and fire officials issued public statements confirming the scene was fabricated. Markets quickly recovered once truth was restored.",
+    "lesson": "Hyper-realistic synthetic media presents immediate systemic threats to public safety and financial stability due to the velocity of algorithmic social media amplification."
+  },
+  {
+    "id": 6,
+    "title": "Optum Commercial Healthcare Algorithm Racial Bias",
+    "year": 2019,
+    "category": "bias",
+    "summary": "A commercial risk-prediction algorithm developed by Optum was used by hospitals and insurers across the United States to allocate specialized chronic healthcare management programs to millions of patients. Researchers discovered that the algorithm systematically assigned lower risk scores to Black patients compared to white patients with identical health burdens. The bias arose because the algorithm used past healthcare spending as a proxy for healthcare need. Due to systemic economic disparities and unequal healthcare access, less money was spent treating Black patients historically, causing the algorithm to falsely conclude they were healthier.",
+    "lesson": "Selecting poor proxy variables like historical financial expenditure instead of direct medical illness introduces insidious systemic bias into life-critical predictive models."
+  },
+  {
+    "id": 7,
+    "title": "Clearview AI Mass Facial Biometrics Scraping and Data Breach",
+    "year": 2020,
+    "category": "privacy",
+    "summary": "Clearview AI scraped over thirty billion images from public websites, social media networks, and personal blogs without individual consent to create a commercial facial recognition search engine. The database was sold to thousands of law enforcement agencies, private companies, and wealthy individuals worldwide. In 2020, Clearview suffered an unauthorized security breach where its entire client list and account logs were stolen. Privacy regulators across the European Union, Canada, and the United Kingdom issued massive fines and cease-and-desist orders, ruling that mass biometric harvesting without explicit knowledge or consent violates fundamental privacy rights.",
+    "lesson": "Mass indiscriminate harvesting of public personal data to generate biometric tracking vectors violates fundamental privacy rights and creates high-value honeypots for malicious actors."
+  },
+  {
+    "id": 8,
+    "title": "Google Bard James Webb Telescope Scientific Hallucination",
+    "year": 2023,
+    "category": "hallucination",
+    "summary": "During the public marketing debut of Google's AI conversational agent Bard, a promotional demonstration video showed the chatbot answering an astronomy inquiry about discoveries from the James Webb Space Telescope. Bard confidently asserted that the telescope took the very first picture of a planet outside our solar system. Astronomers immediately pointed out on social media that the European Southern Observatory's Very Large Telescope captured the first exoplanet image in 2004. The factual error highlighted the risk of deploying generative conversational agents without fact-checking filters, resulting in Alphabet losing over one hundred billion dollars in market valuation in one day.",
+    "lesson": "Deploying generative conversational agents without deterministic fact-checking filters can result in high-stakes reputational and commercial damage from confident factual hallucinations."
+  }
+]

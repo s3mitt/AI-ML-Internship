@@ -1,0 +1,83 @@
+================================================================
+AI INCIDENT FINDER - VERIFIED TERMINAL OUTPUT CAPTURES
+Environment: Python 3.12.0 on Windows (100% Offline RAG)
+Date: 2026-10-05
+================================================================
+
+[DEMO QUERY 1: NORMAL IN-DOMAIN QUERY - CATEGORY: BIAS]
+Command: python app.py "How did AI show bias in hiring resumes?"
+
+================================================================
+QUERY: How did AI show bias in hiring resumes?
+CONFIDENCE: 15.65% (Threshold: 15.00%)
+================================================================
+
+ANSWER:
+Regarding 'Amazon Automated Resume Screening Tool Gender Bias' (2018): Amazon developed an internal machine learning recruiting engine to automate resume screening and identify top software engineering talent. The model was trained on resumes submitted to the company over a ten-year window. Because technology industry hiring was historically male-dominated, the algorithm learned to penalize candidate profiles containing the word 'women's' (such as 'women's chess club captain') and downgraded graduates of all-women's colleges. Engineers attempted to neutralize specific gender terms, but the model discovered correlated proxy terms. Amazon ultimately scrapped the system in 2018 before deployment because equal treatment could not be guaranteed.
+
+Key Takeaway: Training algorithms on historical hiring data codifies and amplifies historical human biases; removing obvious demographic protected attributes is insufficient when proxy variables remain.
+
+SOURCES:
+  1. Amazon Automated Resume Screening Tool Gender Bias (2018) [BIAS] - Similarity: 15.65%
+================================================================
+
+
+[DEMO QUERY 2: DIFFERENT CATEGORY - CATEGORY: HALLUCINATION]
+Command: python app.py "Lawyers submitting fake AI hallucinated legal cases to court"
+
+================================================================
+QUERY: Lawyers submitting fake AI hallucinated legal cases to court
+CONFIDENCE: 17.48% (Threshold: 15.00%)
+================================================================
+
+ANSWER:
+Regarding 'Mata v. Avianca Fictitious Case Citations in Federal Court' (2023): Attorneys representing Roberto Mata in a personal injury lawsuit against Avianca Airlines in US District Court used ChatGPT to perform legal research. The chatbot fabricated non-existent judicial decisions, bogus judicial quotes, and invalid docket numbers, including 'Varghese v. China Southern Airlines'. The attorneys submitted these hallucinated precedents in a formal federal court brief without independently verifying the citations in official law reporters. When opposing counsel and the presiding judge could not locate the cited authorities, the court uncovered the hallucination and sanctioned the attorneys with monetary fines and professional reprimand.
+
+Key Takeaway: Large language models generate plausible-sounding syntactic hallucinations rather than verified factual truth; professional workflows require mandatory human verification against authoritative primary sources.
+
+SOURCES:
+  1. Mata v. Avianca Fictitious Case Citations in Federal Court (2023) [HALLUCINATION] - Similarity: 17.48%
+================================================================
+
+
+[DEMO QUERY 3: OUT-OF-DOMAIN UNRELATED QUERY - GUARDRAIL REFUSAL]
+Command: python app.py "What is the recipe for chocolate cake?"
+
+================================================================
+QUERY: What is the recipe for chocolate cake?
+CONFIDENCE: 0.00% (Threshold: 15.00%)
+================================================================
+
+I don't have enough information to answer that.
+
+[Guardrail Active] Query similarity was below confidence threshold.
+================================================================
+
+
+[DEMO QUERY 4: JSON OUTPUT MODE - STRUCTURED SYSTEM INTEGRATION]
+Command: python app.py "Samsung proprietary leak" --json
+
+{
+  "query": "Samsung proprietary leak",
+  "answer": "Regarding 'Samsung Semiconductor Source Code Leak via Public LLM' (2023): Engineers in Samsung's semiconductor division uploaded confidential source code, semiconductor equipment measurement logs, and executive meeting notes into OpenAI's ChatGPT to identify software bugs and generate meeting summaries. Because employees used the default public consumer tier, the entered data was retained by the external provider for potential future model retraining. This resulted in proprietary intellectual property and trade secrets being transmitted beyond corporate security firewalls. Following three separate disclosure incidents within one month, Samsung restricted employee access to consumer AI chatbots and mandated the creation of internal isolated AI infrastructure.\n\nKey Takeaway: Entering confidential corporate or client data into external public generative models creates severe data exfiltration risks unless rigorous enterprise zero-data-retention agreements are enforced.",
+  "confidence": 0.1705,
+  "sources": [
+    {
+      "title": "Samsung Semiconductor Source Code Leak via Public LLM",
+      "year": 2023,
+      "category": "privacy",
+      "similarity": 0.1705
+    }
+  ],
+  "guardrail_triggered": false,
+  "matches": [
+    {
+      "id": 3,
+      "title": "Samsung Semiconductor Source Code Leak via Public LLM",
+      "year": 2023,
+      "category": "privacy",
+      "summary": "Engineers in Samsung's semiconductor division uploaded confidential source code, semiconductor equipment measurement logs, and executive meeting notes into OpenAI's ChatGPT to identify software bugs and generate meeting summaries. Because employees used the default public consumer tier, the entered data was retained by the external provider for potential future model retraining. This resulted in proprietary intellectual property and trade secrets being transmitted beyond corporate security firewalls. Following three separate disclosure incidents within one month, Samsung restricted employee access to consumer AI chatbots and mandated the creation of internal isolated AI infrastructure.",
+      "lesson": "Entering confidential corporate or client data into external public generative models creates severe data exfiltration risks unless rigorous enterprise zero-data-retention agreements are enforced."
+    }
+  ]
+}
